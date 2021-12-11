@@ -1,0 +1,111 @@
+.restaurants-box {
+  background-color: whitesmoke;
+}
+
+.restaurants-box h2 {
+  margin-top: 3rem;
+  padding: 4rem 0rem 0rem 1.5rem;
+}
+
+.restaurants-box .card-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.5rem 1.5rem 6rem 1.5rem;
+  gap: 1.5rem;
+}
+
+@media (min-width: 769px) {
+  .restaurants-box .card-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .restaurants-box .card-box {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: none;
+        grid-template-rows: none;
+  }
+}
+
+.restaurants-box .card-box .new {
+  position: relative;
+}
+
+.restaurants-box .card-box .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+
+.restaurants-box .menu-card {
+  color: inherit;
+  text-decoration: none;
+  height: 18rem;
+  background-color: white;
+  border-radius: 25px;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.restaurants-box .menu-card img {
+  height: 70%;
+  width: 100%;
+  border-radius: 25px 25px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurants-box .menu-card .card-description {
+  position: relative;
+  padding: 0.7rem;
+}
+
+.restaurants-box .menu-card .card-description h3 {
+  margin: 0px;
+  padding-bottom: 0.3rem;
+}
+
+.restaurants-box .menu-card .card-description p {
+  margin: 0px;
+  font-size: 1.1rem;
+}
+
+.restaurants-box .menu-card .card-description i {
+  position: absolute;
+  font-size: 1.8rem;
+  right: 1.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.restaurants-box .menu-card .card-description .fas {
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+/*# sourceMappingURL=restaurant.css.map */

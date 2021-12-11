@@ -1,0 +1,18 @@
+@import "../utils.scss";
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: $grey;
+    padding: 1rem; 
+    & i {
+        margin: 0px;
+    }
+    & .city {
+        margin: 0px;
+        font-weight: 500;
+
+    }  
+}

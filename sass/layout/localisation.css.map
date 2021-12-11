@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACV,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,IAAI;EACT,gBAAgB,ECNb,OAAO;EDOV,OAAO,EAAE,IAAI;CAShB;;AAfD,AAOI,aAPS,CAOP,CAAC,CAAC;EACA,MAAM,EAAE,GAAG;CACd;;AATL,AAUI,aAVS,CAUP,KAAK,CAAC;EACJ,MAAM,EAAE,GAAG;EACX,WAAW,EAAE,GAAG;CAEnB",
+    "sources": [
+        "localisation.scss",
+        "../utils.scss"
+    ],
+    "names": [],
+    "file": "localisation.css"
+}

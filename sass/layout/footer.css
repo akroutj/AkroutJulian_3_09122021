@@ -1,0 +1,33 @@
+footer {
+  color: white;
+  background-color: #353535;
+  padding: 2rem;
+}
+
+footer h5 {
+  font-family: 'Shrikhand', cursive;
+  margin: 0px;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer .footer-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 1rem 0rem 0rem 0rem;
+}
+
+footer .footer-list li {
+  padding-bottom: 0.5rem;
+}
+
+footer .footer-list i {
+  padding-right: 0.5rem;
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=footer.css.map */

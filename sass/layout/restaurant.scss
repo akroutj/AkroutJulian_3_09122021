@@ -1,0 +1,82 @@
+@import "../utils.scss";
+
+.restaurants-box {
+    background-color: $lightgrey;
+    & h2 {
+        margin-top: 3rem;
+        padding: 4rem 0rem 0rem 1.5rem;
+    }
+    & .card-box {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 1.5rem 6rem 1.5rem;
+        gap: 1.5rem;
+        @media (min-width: 769px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: none;
+        }
+        & .new {
+            position: relative;
+        }
+        & .new::before {
+            content: "Nouveau";
+            position: absolute;
+            height: 2rem;
+            width: 5rem;
+            padding: 0.5rem;
+            border-radius: 0.125rem;
+            background-color: $tertiary;
+            color: darken($tertiary, 50%);
+            display: grid;
+            place-items: center;
+            right: 1rem;
+            top: 1rem
+        }
+    }
+    & .menu-card {
+        color: inherit;
+        text-decoration: none;
+        height: 18rem;
+        background-color: white;
+        border-radius: 25px;
+        @include button_shadow();
+        & img {
+            height: 70%;
+            width: 100%;
+            border-radius: 25px 25px 0px 0px;
+            object-fit: cover;
+        }
+        & .card-description {
+            position: relative;
+            padding: 0.7rem;
+            & h3 {
+                margin: 0px;
+                padding-bottom: 0.3rem;
+            }
+            & p {
+                margin: 0px;
+                font-size: 1.1rem;
+            }
+            & i {
+                position: absolute;
+                font-size: 1.8rem;
+                right: 1.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            & .fas {
+                color: transparent;
+                background-image: linear-gradient(rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
+                background-clip: text;
+                -webkit-background-clip: text;
+
+
+            } 
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.explorer {
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 50px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .explorer h2, .explorer p {
+    max-width: 310px;
+    margin: auto;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.explorer p {
+  opacity: 0.7;
+}
+
+.explorer button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  margin-top: 1.5rem;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.explorer button:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  opacity: 0.9;
+}
+/*# sourceMappingURL=explorer.css.map */

@@ -1,0 +1,52 @@
+@import "../utils.scss";
+
+
+.functioning {
+    & h2 {
+        margin-top: 3rem;
+        margin-left: 1.5rem;
+    }
+    & ol {
+        display: flex;
+        padding: 2rem 1.5rem;
+        margin: 0px;
+        gap: 1.5rem;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }      
+    }  
+    & li {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        gap: 2rem;
+        background-color: $lightgrey;
+        padding: 1.3rem 2rem;
+        flex-grow: 1;
+        border-radius: 1rem;
+        @include button_shadow();
+        & .number {
+            color: white;
+            margin-left: -2.9rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(147, 86, 220, 1);
+            padding: 1rem;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+        }
+        & i.fas {
+            align-items: center;
+            font-size: 1.2rem;
+            opacity: 0.5;
+        }
+        & .title {
+            font-weight: bold;
+            margin: 0px;
+        }
+    }   
+}  

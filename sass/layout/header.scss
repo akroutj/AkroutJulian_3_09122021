@@ -1,0 +1,9 @@
+@import "../utils.scss";
+
+header {
+    position: relative;
+    font-family:'Shrikhand', cursive;
+    text-align: center;
+    @include button_shadow();
+    padding: 1px 0px;
+}

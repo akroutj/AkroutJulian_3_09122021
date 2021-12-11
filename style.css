@@ -10,16 +10,12 @@ body {
   font-family: "roboto", sans-serif;
 }
 
-h2 {
-  margin: 0px;
-}
-
 header {
   position: relative;
   font-family: 'Shrikhand', cursive;
   text-align: center;
-  -webkit-box-shadow: 0px 5px 15px grey;
-          box-shadow: 0px 5px 15px grey;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   padding: 1px 0px;
 }
 
@@ -35,22 +31,35 @@ header {
           align-items: center;
   gap: 25px;
   background-color: #eaeaea;
-  padding: 30px;
+  padding: 1rem;
 }
 
 .localisation i {
   margin: 0px;
 }
 
-.localisation h3 {
+.localisation .city {
   margin: 0px;
+  font-weight: 500;
 }
 
-/* EXLORER */
 .explorer {
   text-align: center;
-  background-color: #f6f6f6;
+  background-color: whitesmoke;
   padding: 50px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .explorer h2, .explorer p {
+    max-width: 310px;
+    margin: auto;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.explorer p {
+  opacity: 0.7;
 }
 
 .explorer button {
@@ -58,11 +67,12 @@ header {
   background-image: linear-gradient(#ff79da, #9356dc);
   color: white;
   padding: 1rem 2rem;
+  font-weight: 600;
   border: none;
   border-radius: 25px;
-  -webkit-box-shadow: 0px 2px 4px grey;
-          box-shadow: 0px 2px 4px grey;
-  margin-top: 10px;
+  margin-top: 1.5rem;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 
 .explorer button:hover {
@@ -71,5 +81,236 @@ header {
   -webkit-transition: 200ms;
   transition: 200ms;
   opacity: 0.9;
+}
+
+.functioning h2 {
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+}
+
+.functioning ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 1.5rem;
+  margin: 0px;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .functioning ol {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.functioning li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 2rem;
+  background-color: whitesmoke;
+  padding: 1.3rem 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.functioning li .number {
+  color: white;
+  margin-left: -2.9rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9356dc;
+  padding: 1rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+.functioning li i.fas {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.functioning li .title {
+  font-weight: bold;
+  margin: 0px;
+}
+
+.restaurants-box {
+  background-color: whitesmoke;
+}
+
+.restaurants-box h2 {
+  margin-top: 3rem;
+  padding: 4rem 0rem 0rem 1.5rem;
+}
+
+.restaurants-box .card-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.5rem 1.5rem 6rem 1.5rem;
+  gap: 1.5rem;
+}
+
+@media (min-width: 769px) {
+  .restaurants-box .card-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .restaurants-box .card-box {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: none;
+        grid-template-rows: none;
+  }
+}
+
+.restaurants-box .card-box .new {
+  position: relative;
+}
+
+.restaurants-box .card-box .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+
+.restaurants-box .menu-card {
+  color: inherit;
+  text-decoration: none;
+  height: 18rem;
+  background-color: white;
+  border-radius: 25px;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.restaurants-box .menu-card img {
+  height: 70%;
+  width: 100%;
+  border-radius: 25px 25px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.restaurants-box .menu-card .card-description {
+  position: relative;
+  padding: 0.7rem;
+}
+
+.restaurants-box .menu-card .card-description h3 {
+  margin: 0px;
+  padding-bottom: 0.3rem;
+}
+
+.restaurants-box .menu-card .card-description p {
+  margin: 0px;
+  font-size: 1.1rem;
+}
+
+.restaurants-box .menu-card .card-description i {
+  position: absolute;
+  font-size: 1.8rem;
+  right: 1.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.restaurants-box .menu-card .card-description .fas {
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+footer {
+  color: white;
+  background-color: #353535;
+  padding: 2rem;
+}
+
+footer h5 {
+  font-family: 'Shrikhand', cursive;
+  margin: 0px;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer .footer-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 1rem 0rem 0rem 0rem;
+}
+
+footer .footer-list li {
+  padding-bottom: 0.5rem;
+}
+
+footer .footer-list i {
+  padding-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* LA PALETTE DU GOUT */
+.hero-image {
+  width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
