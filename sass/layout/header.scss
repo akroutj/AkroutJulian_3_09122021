@@ -2,8 +2,11 @@
 
 header {
     position: relative;
-    font-family:'Shrikhand', cursive;
     text-align: center;
-    @include button_shadow();
+    @include card-shadow;
     padding: 1px 0px;
+    & .logo {
+        height: 2rem;
+        margin-top: 1.3rem;
+    }
 }

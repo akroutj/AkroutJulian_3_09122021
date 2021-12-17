@@ -1,5 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,400&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,400&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
+@-webkit-keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 *, ::before, ::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,13 +85,159 @@ body {
   font-family: "roboto", sans-serif;
 }
 
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loader {
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.5;
+  -webkit-animation: disappear 200ms 3s forwards;
+          animation: disappear 200ms 3s forwards;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.loader::after {
+  content: "";
+  -webkit-animation: spin 3s infinite linear;
+          animation: spin 3s infinite linear;
+  width: 100px;
+  height: 100px;
+  border: solid 5px #9356DC;
+  border-top: transparent;
+  border-left: transparent;
+  border-radius: 50%;
+}
+
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 header {
   position: relative;
-  font-family: 'Shrikhand', cursive;
   text-align: center;
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
   padding: 1px 0px;
+}
+
+header .logo {
+  height: 2rem;
+  margin-top: 1.3rem;
+}
+
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .localisation {
@@ -32,15 +253,54 @@ header {
   gap: 25px;
   background-color: #eaeaea;
   padding: 1rem;
+  margin-left: -1.3rem;
 }
 
-.localisation i {
+.localisation .fa-map-marker-alt {
   margin: 0px;
 }
 
 .localisation .city {
   margin: 0px;
   font-weight: 500;
+}
+
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .explorer {
@@ -63,6 +323,7 @@ header {
 }
 
 .explorer button {
+  cursor: pointer;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   color: white;
@@ -70,9 +331,10 @@ header {
   font-weight: 600;
   border: none;
   border-radius: 25px;
-  margin-top: 1.5rem;
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0rem 0.25rem 1rem rgba(0, 0, 0, 0.35);
+          box-shadow: 0rem 0.25rem 1rem rgba(0, 0, 0, 0.35);
+  box-shadow: 0rem 0.25rem 1rem rgba(0, 0, 0, 0.35);
+  margin-top: 1.3rem;
 }
 
 .explorer button:hover {
@@ -81,6 +343,46 @@ header {
   -webkit-transition: 200ms;
   transition: 200ms;
   opacity: 0.9;
+  -webkit-box-shadow: 0rem 0.35rem 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0rem 0.35rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .functioning h2 {
@@ -97,7 +399,7 @@ header {
   gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .functioning ol {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -124,8 +426,8 @@ header {
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-radius: 1rem;
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
 }
 
 .functioning li .number {
@@ -161,12 +463,60 @@ header {
   margin: 0px;
 }
 
+.functioning li:hover {
+  cursor: pointer;
+  background-color: #f2eafb;
+}
+
+.functioning li:hover .fas {
+  color: #9356DC;
+  opacity: 1;
+}
+
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .restaurants-box {
   background-color: whitesmoke;
 }
 
 .restaurants-box h2 {
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding: 4rem 0rem 0rem 1.5rem;
 }
 
@@ -180,25 +530,28 @@ header {
           flex-direction: column;
   padding: 1.5rem 1.5rem 6rem 1.5rem;
   gap: 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (min-width: 769px) {
   .restaurants-box .card-box {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 @media (min-width: 1200px) {
   .restaurants-box .card-box {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: none;
-        grid-template-rows: none;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -211,6 +564,7 @@ header {
   position: absolute;
   height: 2rem;
   width: 5rem;
+  font-weight: 500;
   padding: 0.5rem;
   border-radius: 0.125rem;
   background-color: #99E2D0;
@@ -228,8 +582,27 @@ header {
   height: 18rem;
   background-color: white;
   border-radius: 25px;
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 769px) {
+  .restaurants-box .menu-card {
+    width: 48%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .restaurants-box .menu-card {
+    width: 25%;
+  }
+}
+
+.restaurants-box .menu-card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
 }
 
 .restaurants-box .menu-card img {
@@ -255,7 +628,7 @@ header {
   font-size: 1.1rem;
 }
 
-.restaurants-box .menu-card .card-description i {
+.restaurants-box .menu-card .card-description .fa-heart {
   position: absolute;
   font-size: 1.8rem;
   right: 1.5rem;
@@ -266,10 +639,57 @@ header {
 
 .restaurants-box .menu-card .card-description .fas {
   color: transparent;
+  opacity: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.restaurants-box .menu-card .card-description .fas:hover {
+  opacity: 1;
+  -webkit-transform: translateY(-50%) scale(1.15);
+          transform: translateY(-50%) scale(1.15);
+}
+
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 footer {
@@ -305,12 +725,306 @@ footer .footer-list i {
   font-size: 0.8rem;
 }
 
-/* LA PALETTE DU GOUT */
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+header {
+  position: relative;
+}
+
+header .fa-arrow-left {
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+  font-size: 1.3rem;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+header .fa-arrow-left:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .hero-image {
   width: 100%;
+  position: relative;
+  z-index: -1;
 }
 
 .hero-image img {
   width: 100%;
+  height: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner {
+  background-color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -3rem;
+  width: 100%;
+  border-radius: 3rem 3rem 0rem 0rem;
+  padding: 2rem;
+  font-weight: 100;
+  position: relative;
+}
+
+.banner .restaurant-name {
+  margin: 0px;
+  font-family: 'Shrikhand', cursive;
+  font-weight: 500;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner .fa-heart {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 3.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.banner .fas {
+  color: transparent;
+  opacity: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.banner .fas:hover {
+  opacity: 1;
+  -webkit-transform: translateY(-50%) scale(1.15);
+          transform: translateY(-50%) scale(1.15);
+}
+
+.menu-box {
+  background-color: whitesmoke;
+}
+
+@media (min-width: 1024px) {
+  .menu-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .menu-box .starters, .menu-box .main-courses, .menu-box .desserts {
+    width: 33%;
+  }
+}
+
+.menu-box h3, .menu-box h4, .menu-box p {
+  margin: 0;
+}
+
+.menu-box p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  padding-top: 0.3rem;
+}
+
+.menu-box h3 {
+  text-transform: uppercase;
+  font-weight: 100;
+  padding-left: 1.5rem;
+  opacity: 0.7;
+  position: relative;
+}
+
+.menu-box h3::after {
+  position: absolute;
+  content: "";
+  height: 0.25rem;
+  width: 2.9rem;
+  background-color: #99E2D0;
+  left: 1.5rem;
+  bottom: -0.6rem;
+}
+
+.menu-box .meal-box {
+  padding: 1.5rem 1rem 0.1rem 1rem;
+}
+
+.menu-box .meal-card {
+  -webkit-animation: appear 1s;
+          animation: appear 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  -webkit-box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
+}
+
+.menu-box .meal-card:nth-child(1) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.menu-box .meal-card:nth-child(2) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.menu-box .meal-card:nth-child(3) {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.menu-box .meal-card .meal-description {
+  padding: 0.7rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu-box .meal-card .meal-description h4, .menu-box .meal-card .meal-description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-box .meal-card .price-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menu-box .meal-card .price {
+  font-weight: bold;
+  padding: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.menu-box .meal-card:hover .check {
+  margin-right: 0;
+  -webkit-transition: margin-right 400ms;
+  transition: margin-right 400ms;
+}
+
+.menu-box .meal-card:hover .fa-check-circle {
+  -webkit-animation: spincheck 0.5s ease-in-out;
+          animation: spincheck 0.5s ease-in-out;
+}
+
+.order {
+  background-color: whitesmoke;
+  height: 15vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.order .order-button {
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  -webkit-box-shadow: 0rem 0.25rem 1rem rgba(0, 0, 0, 0.35);
+          box-shadow: 0rem 0.25rem 1rem rgba(0, 0, 0, 0.35);
+  box-shadow: 0rem 0.25rem 1rem rgba(0, 0, 0, 0.35);
+  padding: 1rem 3rem;
+}
+
+.order .order-button:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  opacity: 0.9;
+  -webkit-box-shadow: 0rem 0.35rem 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0rem 0.35rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.check {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #99E2D0;
+  width: 4rem;
+  margin-right: -4rem;
+  -webkit-transition: margin-right 400ms;
+  transition: margin-right 400ms;
+}
+
+.check .fa-check-circle {
+  font-size: 1.5rem;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

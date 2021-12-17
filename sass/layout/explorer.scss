@@ -1,3 +1,4 @@
+
 @import "../utils.scss";
 
 .explorer {
@@ -10,25 +11,20 @@
         max-width: 310px;
         margin: auto;
         padding-bottom: 0.5rem;
-    }  
-    
-}   
+        }  
+    }   
     & p {
         opacity: 0.7;
     }
     & button {
-        background-image: linear-gradient(rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
-        color: white;
-        padding: 1rem 2rem;
-        font-weight: 600;
-        border: none;
-        border-radius: 25px;
-        margin-top: 1.5rem;
-        @include button_shadow();
+        @include button-base;
+        @include button-shadow;
+        margin-top: 1.3rem;
         &:hover {
             transform: scale(1.02);
             transition: 200ms;
             opacity: 0.9;
+            @include darken-shadow;
         }
     }
 }

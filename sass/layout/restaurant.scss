@@ -1,9 +1,10 @@
 @import "../utils.scss";
 
+
 .restaurants-box {
     background-color: $lightgrey;
     & h2 {
-        margin-top: 3rem;
+        margin-top: 2rem;
         padding: 4rem 0rem 0rem 1.5rem;
     }
     & .card-box {
@@ -11,14 +12,14 @@
         flex-direction: column;
         padding: 1.5rem 1.5rem 6rem 1.5rem;
         gap: 1.5rem;
+        box-sizing: border-box;
         @media (min-width: 769px) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
         @media (min-width: 1200px) {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: none;
+            flex-wrap: nowrap;
         }
         & .new {
             position: relative;
@@ -28,6 +29,7 @@
             position: absolute;
             height: 2rem;
             width: 5rem;
+            font-weight: 500;
             padding: 0.5rem;
             border-radius: 0.125rem;
             background-color: $tertiary;
@@ -44,7 +46,18 @@
         height: 18rem;
         background-color: white;
         border-radius: 25px;
-        @include button_shadow();
+        @include card-shadow;
+        @media (min-width: 769px) {
+            width: 48%;
+        }
+        @media (min-width: 1200px) {
+            width: 25%;
+        }
+    
+        &:hover {
+            transform: scale(1.01);
+            transition-duration: 200ms;
+        }
         & img {
             height: 70%;
             width: 100%;
@@ -62,7 +75,7 @@
                 margin: 0px;
                 font-size: 1.1rem;
             }
-            & i {
+            & .fa-heart {
                 position: absolute;
                 font-size: 1.8rem;
                 right: 1.5rem;
@@ -71,12 +84,16 @@
             }
             & .fas {
                 color: transparent;
-                background-image: linear-gradient(rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
+                opacity: 0;    
+                background-image: $gradient;
                 background-clip: text;
                 -webkit-background-clip: text;
-
-
-            } 
+                transition: all 200ms ease-in-out;
+                &:hover {
+                    opacity: 1;
+                    transform: translateY(-50%) scale(1.15);
+                }
+            }        
         }
     }
 }

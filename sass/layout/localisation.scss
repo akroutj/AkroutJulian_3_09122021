@@ -7,12 +7,12 @@
     gap: 25px;
     background-color: $grey;
     padding: 1rem; 
-    & i {
+    margin-left: -1.3rem;
+    & .fa-map-marker-alt {
         margin: 0px;
     }
     & .city {
         margin: 0px;
         font-weight: 500;
-
     }  
 }

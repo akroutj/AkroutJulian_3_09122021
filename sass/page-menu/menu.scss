@@ -1,0 +1,185 @@
+
+@import "../utils.scss";
+
+header {
+    position: relative;
+    & .fa-arrow-left {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        opacity: 0.7;
+        font-size: 1.3rem;
+        top: 1.5rem;
+        left: 1.5rem;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.hero-image {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    & img {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+    }
+}
+
+.banner {
+    background-color: $lightgrey;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: -3rem;
+    width: 100%;
+    border-radius: 3rem 3rem 0rem 0rem;
+    padding: 2rem;
+    font-weight: 100;
+    position: relative;
+    & .restaurant-name {
+        margin: 0px;
+        font-family:'Shrikhand', cursive;
+        font-weight: 500;
+        font-size: 1.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    & .fa-heart {
+        position: absolute;
+        font-size: 1.5rem;
+        right: 3.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    & .fas {
+        color: transparent;
+        opacity: 0;    
+        background-image: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition: all 200ms ease-in-out;
+        &:hover {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.15);
+        }
+    }
+}  
+
+.menu-box {
+    background-color: $lightgrey;
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        & .starters, .main-courses, .desserts {
+            width: 33%;
+        }
+    }  
+    & h3, h4, p {
+        margin: 0;
+    }
+    & p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        padding-top: 0.3rem;
+    }
+    & h3 {
+        text-transform: uppercase;
+        font-weight: 100;
+        padding-left: 1.5rem;
+        opacity: 0.7;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            height: 0.25rem;
+            width: 2.9rem;
+            background-color: $tertiary;
+            left: 1.5rem;
+            bottom: -0.6rem;
+        }
+    }
+    & .meal-box {
+        padding: 1.5rem 1rem 0.1rem 1rem;
+    }
+    & .meal-card {
+        $numbersOfItems: 3;
+        @for $i from 1 through $numbersOfItems {
+            &:nth-child(#{$i}) {
+                animation-delay: 200ms * $i;
+            }
+        }
+        animation: appear 1s;
+        animation-fill-mode: both;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        @include card-shadow;
+        & .meal-description {  
+            padding: 0.7rem;
+            overflow: hidden;
+            white-space: nowrap;
+             & h4, p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+             }
+        }
+        & .price-box {
+            display: flex;
+            flex-direction: row;
+        }
+        & .price {
+            font-weight: bold;
+            padding: 0.7rem;
+            display: flex;
+            align-items: flex-end;
+        }
+        &:hover {
+            & .check {
+                margin-right: 0;
+                transition: margin-right 400ms;  
+            }
+            & .fa-check-circle {
+                animation: spincheck 0.5s ease-in-out;
+            }
+        }
+    }
+}
+
+.order {
+    background-color: $lightgrey;
+    height: 15vh;
+    display: grid;
+    place-items: center;
+    & .order-button {
+        @include button-base;
+        @include button-shadow;
+        padding: 1rem 3rem;
+        &:hover {
+            transform: scale(1.02);
+            transition: 200ms;
+            opacity: 0.9;
+            @include darken-shadow;
+        }
+    }
+}
+
+.check {
+    display: grid;
+    place-items: center;
+    background-color: $tertiary;
+    width: 4rem;
+    margin-right: -4rem;
+    transition: margin-right 400ms;
+    & .fa-check-circle {
+        font-size: 1.5rem;
+        color: white;
+    }
+}

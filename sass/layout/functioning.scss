@@ -1,3 +1,4 @@
+
 @import "../utils.scss";
 
 
@@ -11,7 +12,7 @@
         padding: 2rem 1.5rem;
         margin: 0px;
         gap: 1.5rem;
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
             flex-direction: column;
         }      
     }  
@@ -25,7 +26,7 @@
         padding: 1.3rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
-        @include button_shadow();
+        @include card-shadow();
         & .number {
             color: white;
             margin-left: -2.9rem;
@@ -47,6 +48,14 @@
         & .title {
             font-weight: bold;
             margin: 0px;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($primary, 35%);
+            & .fas {
+                color: $primary;
+                opacity: 1;
+            }
         }
     }   
 }  

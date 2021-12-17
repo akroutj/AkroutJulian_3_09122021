@@ -5,7 +5,62 @@ $blackfooter: #353535;
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
+$gradient: linear-gradient(rgba(255, 121, 218, 1),rgba(147, 86, 220, 1));
 
-@mixin button_shadow {
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+@mixin button-shadow {
+    box-shadow: 0rem 0.25rem 1rem rgba(0,0,0, 0.35);
+}
+
+@mixin darken-shadow {
+    box-shadow: 0rem 0.35rem 1rem rgba(0,0,0, 0.5);
+}
+
+@mixin card-shadow {
+    box-shadow: 0.2rem 0.2rem 15px rgba(0,0,0, 0.15);
+}
+
+
+
+@mixin button-base {
+    cursor: pointer;
+    background-image: $gradient;
+    color: white;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    @include button_shadow();
+}
+
+@keyframes spincheck {
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }    
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+      }
+    
+      100% {
+          transform: translateY(0);
+        opacity: 1;
+      }
+}
+
+@keyframes disappear {
+    to {
+        transform: scale(0);
+      }  
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }   
 }

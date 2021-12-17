@@ -1,9 +1,85 @@
+@-webkit-keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes spincheck {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes disappear {
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .restaurants-box {
   background-color: whitesmoke;
 }
 
 .restaurants-box h2 {
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding: 4rem 0rem 0rem 1.5rem;
 }
 
@@ -17,25 +93,28 @@
           flex-direction: column;
   padding: 1.5rem 1.5rem 6rem 1.5rem;
   gap: 1.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (min-width: 769px) {
   .restaurants-box .card-box {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 @media (min-width: 1200px) {
   .restaurants-box .card-box {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: none;
-        grid-template-rows: none;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -48,6 +127,7 @@
   position: absolute;
   height: 2rem;
   width: 5rem;
+  font-weight: 500;
   padding: 0.5rem;
   border-radius: 0.125rem;
   background-color: #99E2D0;
@@ -65,8 +145,27 @@
   height: 18rem;
   background-color: white;
   border-radius: 25px;
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 0.2rem 0.2rem 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 769px) {
+  .restaurants-box .menu-card {
+    width: 48%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .restaurants-box .menu-card {
+    width: 25%;
+  }
+}
+
+.restaurants-box .menu-card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
 }
 
 .restaurants-box .menu-card img {
@@ -92,7 +191,7 @@
   font-size: 1.1rem;
 }
 
-.restaurants-box .menu-card .card-description i {
+.restaurants-box .menu-card .card-description .fa-heart {
   position: absolute;
   font-size: 1.8rem;
   right: 1.5rem;
@@ -103,9 +202,18 @@
 
 .restaurants-box .menu-card .card-description .fas {
   color: transparent;
+  opacity: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.restaurants-box .menu-card .card-description .fas:hover {
+  opacity: 1;
+  -webkit-transform: translateY(-50%) scale(1.15);
+          transform: translateY(-50%) scale(1.15);
 }
 /*# sourceMappingURL=restaurant.css.map */
