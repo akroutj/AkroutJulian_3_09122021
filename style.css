@@ -795,6 +795,12 @@ header .fa-arrow-left:hover {
      object-fit: cover;
 }
 
+@media (min-width: 1024px) {
+  .hero-image img {
+    height: 50vh;
+  }
+}
+
 .banner {
   background-color: whitesmoke;
   display: -webkit-box;
@@ -809,7 +815,7 @@ header .fa-arrow-left:hover {
   margin-top: -3rem;
   width: 100%;
   border-radius: 3rem 3rem 0rem 0rem;
-  padding: 2rem;
+  padding: 2rem 4rem 2rem 2rem;
   font-weight: 100;
   position: relative;
 }
@@ -827,7 +833,7 @@ header .fa-arrow-left:hover {
 .banner .fa-heart {
   position: absolute;
   font-size: 1.5rem;
-  right: 3.5rem;
+  right: 2rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -936,6 +942,11 @@ header .fa-arrow-left:hover {
           animation-delay: 600ms;
 }
 
+.menu-box .meal-card:nth-child(4) {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
 .menu-box .meal-card .meal-description {
   padding: 0.7rem;
   overflow: hidden;
@@ -968,6 +979,22 @@ header .fa-arrow-left:hover {
           align-items: flex-end;
 }
 
+.menu-box .meal-card .check {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #99E2D0;
+  width: 4rem;
+  margin-right: -4rem;
+  -webkit-transition: margin-right 400ms;
+  transition: margin-right 400ms;
+}
+
+.menu-box .meal-card .check .fa-check-circle {
+  font-size: 1.5rem;
+  color: white;
+}
+
 .menu-box .meal-card:hover .check {
   margin-right: 0;
   -webkit-transition: margin-right 400ms;
@@ -981,10 +1008,11 @@ header .fa-arrow-left:hover {
 
 .order {
   background-color: whitesmoke;
-  height: 15vh;
+  height: 20vh;
   display: -ms-grid;
   display: grid;
   place-items: center;
+  padding-bottom: 2rem;
 }
 
 .order .order-button {
@@ -1010,21 +1038,5 @@ header .fa-arrow-left:hover {
   opacity: 0.9;
   -webkit-box-shadow: 0rem 0.35rem 1rem rgba(0, 0, 0, 0.5);
           box-shadow: 0rem 0.35rem 1rem rgba(0, 0, 0, 0.5);
-}
-
-.check {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  background-color: #99E2D0;
-  width: 4rem;
-  margin-right: -4rem;
-  -webkit-transition: margin-right 400ms;
-  transition: margin-right 400ms;
-}
-
-.check .fa-check-circle {
-  font-size: 1.5rem;
-  color: white;
 }
 /*# sourceMappingURL=style.css.map */
